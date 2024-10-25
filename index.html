@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Celestial Ark</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Text based adevnture game" />
+  <meta name="author" content="Ayan Huda" />
+  <meta name="keywords" content="celestial ark">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <!--linking the css page to the index.html file-->
+ <link href="assets/style.css" rel="stylesheet" />  
+  </head>
+
+  <body>
+    <main>
+        <header>
+        <div id="Title" class = "primary">
+            <h1><a href="index.html">Celestial Ark Prototype</a></h1>
+            <h2>A Text Based Adventure Game</h2>
+        </div>
+
+        <div>
+            <nav class="primary" id="tabs">
+                <ul>
+                <li onclick="reset()">Restart</li>
+                <li onclick="controls()">Controls</li>
+                <li onclick="background()">Background</li>
+                </ul>
+              </nav>
+        </div>
+        </header>
+
+        <div id="chatbox">
+            Welcome to <strong>Celestial Ark!</strong> Type <strong>Start</strong> to start the game. Enjoy!
+        </div>
+
+        <div>
+            <input type = "text" id = "userCommands" placeholder="Type a command..." oninput= "this.value = this.value.toLowerCase();"/>
+            <button type ="button" onclick="processCommands()">Send</button>
+        </div>
+
+        <script src="assets/js.js"></script>
+
+  </main>
+
+  </body>
+
+  </html>
