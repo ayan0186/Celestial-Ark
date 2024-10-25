@@ -61,14 +61,24 @@ html {
   }
 
   #chatbox {
-    width: 100%;        /* Full width of the container */
+    width: 1000px;        /* Full width of the container */
     height: 350px;      /* Increase the height to make it bigger */
     background-color: #444;
     border: 1px solid #666;
     padding: 20px;      /* Add more padding for better spacing */
     margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px; 
     color: #fff;
-    font-size: 16px;    /* Increase the font size for better readability */
+    font-size: 16px;   /* Increase the font size for better readability */
+}
+
+#chatbox {
+    position:absolute;
+      top:50%;
+      left:70px;
+      margin-top: -60px;
+      margin-left:-60px;
 }
 
 #userCommands {

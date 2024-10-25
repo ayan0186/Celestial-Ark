@@ -24,7 +24,7 @@
                 <ul>
                 <li onclick="reset()">Restart</li>
                 <li onclick="controls()">Controls</li>
-                <li onclick="background()">Background</li>
+                <li onclick="background()">Synopsis</li>
                 </ul>
               </nav>
         </div>
@@ -34,7 +34,7 @@
             Welcome to <strong>Celestial Ark!</strong> Type <strong>Start</strong> to start the game. Enjoy!
         </div>
 
-        <div>
+        <div id="input">
             <input type = "text" id = "userCommands" placeholder="Type a command..." oninput= "this.value = this.value.toLowerCase();"/>
             <button type ="button" onclick="processCommands()">Send</button>
         </div>
