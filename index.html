@@ -14,8 +14,8 @@
   <body>
     <main>
         <header>
-        <div id="Title" class = "primary">
-            <h1><a href="index.html">Celestial Ark Prototype</a></h1>
+        <div class = "primary">
+            <h1>Celestial Ark Prototype</h1>
             <h2>A Text Based Adventure Game</h2>
         </div>
 
@@ -34,9 +34,9 @@
             Welcome to <strong>Celestial Ark!</strong> Type <strong>Start</strong> to start the game. Enjoy!
         </div>
 
-        <div id="input">
-            <input type = "text" id = "userCommands" placeholder="Type a command..." oninput= "this.value = this.value.toLowerCase();"/>
-            <button type ="button" onclick="processCommands()">Send</button>
+        <div id="button-container">
+            <button type ="button" id="LeftButton" onclick="processLeftCommands()">Choice #1</button>
+            <button type ="button" id="RightButton" onclick="processRightCommands()">Choice #2</button>
         </div>
 
         <script src="assets/js.js"></script>

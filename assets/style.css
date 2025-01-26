@@ -9,25 +9,48 @@ html {
   }
 
   body{
-    background-image: url('img/dark_fantasy.jpg');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 100vh; /* Makes the body take the full height of the viewport */
-    margin: 0; /* Removes default margin */
+    width: 100%; 
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2A1A4A, #1E2A47, #1D3B28, #121212); 
+    padding: 10px; 
+    animation: gradientShift 1s ease infinite; /* Smooth, subtle animation for the gradient */
   }
 
   body{
     font-family: 'Courier New', Courier, monospace;
   }
 
-  h1{
-    text-decoration: none;
+  h1 {
+    font-family: 'Courier New', Courier, monospace;  /* Monospaced font for consistency with chatbox */
+    color: #fff;  /* White text for contrast against dark background */
+    text-align: center;  /* Centers the heading */
+    font-size: 36px;  /* Larger size for the main title */
+    margin: 20px 0;  /* Adds spacing above and below */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Adds subtle shadow for emphasis */
+  }
+  
+  /* Styling for h2 */
+  h2 {
+    font-family: 'Courier New', Courier, monospace;  /* Same font for consistency */
+    color: #fff;  /* White text for readability */
+    text-align: center;  /* Centers the heading */
+    font-size: 28px;  /* Slightly smaller than h1 */
+    margin: 15px 0;  /* Adds spacing above and below */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);  /* Adds subtle shadow for emphasis */
   }
 
   h1, h2 {
+    color: #D4AF37; /* Gold headers */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Dark shadow for depth */
     text-align: center;
+    padding: 20px;
+  }
+
+  #tabs ul li {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for tabs */
+    color: #F1F1F1; /* Light text for contrast */
     padding: 10px;
+    border-radius: 5px;
   }
 
   #tabs{ 
@@ -46,13 +69,11 @@ html {
     justify-content: space-around;
 }
 
-  #tabs ul li{ 
-  color: #000000;
-  text-decoration: none;
-  background-color: lightgray;
-  background-color:rbga(0,0,0, .4); 
-  padding: 5px;
-  border-radius: 40px;
+#tabs ul li {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background for tabs */
+  color: #F1F1F1; /* Light text for contrast */
+  padding: 10px;
+  border-radius: 5px;
 }
 
   #tabs ul li:hover {
@@ -61,50 +82,58 @@ html {
   }
 
   #chatbox {
-    width: 1000px;        /* Full width of the container */
-    height: 350px;      /* Increase the height to make it bigger */
-    background-color: #444;
-    border: 1px solid #666;
-    padding: 20px;      /* Add more padding for better spacing */
-    margin-bottom: 10px;
-    margin-left: 30px;
-    margin-right: 30px; 
-    color: #fff;
-    font-size: 16px;   /* Increase the font size for better readability */
+    width: 60%;  /* Adjust the width to make the chatbox proportionate */
+    max-width: 800px;  /* Ensures the chatbox doesn't get too wide */
+    height: 400px;  /* Make the chatbox taller for more content */
+    background-color: rgba(0, 0, 0, 0.7);  /* Dark background */
+    border: 1px solid #555;  /* Subtle border for a clean look */
+    border-radius: 10px;  /* Rounded corners for smooth look */
+    padding: 20px;  /* Padding inside the chatbox */
+    margin: 20px auto;  /* Center horizontally with auto margin */
+    color: #fff;  /* White text color for contrast */
+    font-size: 16px;  /* Larger text for readability */
+    font-family: 'Courier New', Courier, monospace;  /* Monospaced font for a chat feel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Slight shadow to lift it off the page */
+    display:block;
+    flex-direction: row;  /* Ensures text content is aligned vertically */
+  }
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  gap: 25%;
+  margin-top: 20px;
 }
 
-#chatbox {
-    position:absolute;
-      top:50%;
-      left:70px;
-      margin-top: -60px;
-      margin-left:-60px;
+
+/* CSS */
+#LeftButton, #RightButton {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-#userCommands {
-    width: 600px;         /* Full width */
-    height: 50px;        /* Increased height */
-    padding: 10px;       /* Internal padding for spacing */
-    font-size: 18px;     /* Larger text size */
-    border: 1px solid #666;
-    border-radius: 5px;  /* Rounded corners */
-    box-sizing: border-box;
-    margin: 10px;
-    opacity: 70%;
+#LeftButton:active, #RightButton:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
 }
 
-button {
-    text-align: center;
-    display:inline;          /* Enables flexbox layout */
-    justify-content: space-between; /* Ensures space is managed well */
-    align-items: center;    /* Vertically center-align the items */
-    margin-top: 10px;
-    height: 50px;
-    width: 100px;
-    cursor: pointer;
-    border: 1px solid #666;
-    border-radius: 5px;
-    opacity: 70%;
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
 }
 
 body{ 
