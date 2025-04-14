@@ -23,6 +23,6 @@ class Node{
   
   } 
 
-const rootNode = new Node("You are transported to a dark and creepy forest... do you choose to go left or right?", leftNode, rightNode); 
 const leftNode = new Node("You follow the left path and notice an empty field with a house in the middle, but something doesn't seem right to you... Do you dare investigate the house or do you keepe walking?")
 const rightNode = new Node("You follow the right path and it starts pouring rain. You find a cave near by and take shelter, until you start hearing some growling noises in the distance.... Do you dare explore the cave and find what awaits you or do you leave the cave in go out in the pouring rain?")
+const rootNode = new Node("You are transported to a dark and creepy forest... do you choose to go left or right?", leftNode, rightNode); 
